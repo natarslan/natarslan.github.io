@@ -1,0 +1,1 @@
+I explore the weather during the 1984 Miners' Strike by analyzing historical data on temperature, rainfall, and sunshine to see how this summer compared to the norm. Check the interactive visualizations to uncover the "strike weather".
