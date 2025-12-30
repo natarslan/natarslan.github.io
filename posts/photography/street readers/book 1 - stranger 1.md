@@ -22,6 +22,8 @@ location:: #germany
 **Book:** 1984 by #george-orwell
 **Date**: 03 April 2025
 
+![Street lit](/attachments/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg)
+
 ![[blog/posts/attachments/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg]]
 
 ![[blog/posts/ignored-material/legacy-projects/photography/street lit/photos/_1_Magnified_SocialMedia.png]]
