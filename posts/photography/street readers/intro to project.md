@@ -1,10 +1,11 @@
-
-## Information
+---
 note type: project-note
-context: #social-photography
+context: social-project
 status: done
-tags: #photography #street-photography #social-project #street-readers
-location: #germany
+location: germany
+---
+
+#photography #street-photography #social-project #street-readers
 
 # street-lit: between the covers
 

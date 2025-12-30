@@ -6,10 +6,14 @@ author: Nat
 
 ## Information
 note type:: project-note
+
 context:: #social-photography
+
 status:: done
-tags: #photography #street-photography #social-project #street-readers
+
 location:: #germany
+
+#photography #street-photography #social-project #street-readers
 
 ## Book/Stranger 2 of 25
 
