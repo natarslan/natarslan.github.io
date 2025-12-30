@@ -46,12 +46,11 @@ This short guide shows the exact commands and checks to run while you create the
 6) Resolve sync/merge issues
 - Aim: reconcile remote/local history safely.
 - Commands:
-  git pull origin main
-  # if histories unrelated: git pull origin main --allow-unrelated-histories
-  # resolve conflicts, then
-  git add . && git commit -m "fix: resolve conflicts"
+	- git pull origin main
+	- if histories unrelated: git pull origin main --allow-unrelated-histories. this resolve conflicts, then 
+	- git add . && git commit -m "fix: resolve conflicts"
 - Troubleshooting:
-  - If unsure which version to keep, inspect conflicts in your editor and use `git checkout --ours <file>` or `git checkout --theirs <file>`.
+	- If unsure which version to keep, inspect conflicts in your editor and use `git checkout --ours <file>` or `git checkout --theirs <file>`.
 
 7) Push and verify CI
 - Aim: trigger GitHub Actions to build and publish.

@@ -5,9 +5,9 @@ tags: code
 
 ## 🏛️ **A Visit to the National Museum in Cardiff**
 
-Recently, I visited the National Museum in Cardiff. Among the many exhibitions, one particular display stood out, a section on the miners’ strike of the 1980s. What caught my attention was a small, but powerful detail: a sign noting that miners remembered the summer of 1984 for its heat. They called it **"strike weather."** No temperatures or graphs were provided, but the memory was vivid — and it was shared by many.
+Recently, I visited the National Museum in Cardiff. Among the many exhibitions, one particular display stood out, a section on the miners’ strike of the 1980s. What caught my attention was a small, but powerful detail: a sign noting that miners remembered the summer of 1984 for its heat. They called it **"strike weather."** No temperatures or graphs were provided, but the memory of the heat was obviously vivid, and it was shared by many.
 
-This piqued my curiosity: **Was the summer of 1984 really unusually hot?** Could I use data to better understand this collective experience — not to dismiss it, but to explore what might have made that summer so memorable?
+This piqued my curiosity: **Was the summer of 1984 really unusually hot?** Could I use data to better understand this collective experience? I got hesitant in the beginning, thinking that lived-experiences should not be proved or disproved by data. My aim is not to dismiss it, but to explore what might have made that summer so memorable?
 
 ## 🪧 Historical Context: The Miners’ Strike
 
@@ -36,18 +36,18 @@ Read "[Coal mining created a culture](https://www.bbc.co.uk/future/article/20240
 
 To answer this question, I delved into data from the **UK Met Office**. Although the inspiration came from Cardiff, the miners’ strike was a nationwide event, with key demonstrations and clashes occurring in mining communities across the UK — especially in regions like South Yorkshire and Lincolnshire. To reflect this broader geography, I examined historical weather data for **Sheffield**, **Waddington**, and **Cardiff**, using publicly available monthly records from the UK Met Office.
 
-<iframe src="/Projects/code/1984MinersStrikeHeat/_output/met_office_table.html" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="/projects/code/1984MinersStrikeHeat/_output/met_office_table.html" width="100%" height="500" frameborder="0"></iframe>
 
 Testing
 ```dataviewjs
-const iframeHtml = `<iframe src="/Projects/code/1984MinersStrikeHeat/_output/met_office_table.html" width="100%" height="500" frameborder="0"></ifram e>`;
+const iframeHtml = `<iframe src="/projects/code/1984MinersStrikeHeat/_output/met_office_table.html" width="100%" height="500" frameborder="0"></ifram e>`;
 const div = dv.el('div', '');
 div.innerHTML = iframeHtml;
 ```
 
 
 The plot below shows the **maximum temperatures (Tmax)** during the summer months of June, July, and August over multiple years. **1984** stands out as a notably warm summer. You can see the interactive plot below:
-<iframe src="/Projects/code/1984MinersStrikeHeat/_output/max_summer_temperature_by_station.html" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="/projects/code/1984MinersStrikeHeat/_output/max_summer_temperature_by_station.html" width="100%" height="500" frameborder="0"></iframe>
 <iframe src="_output/max_summer_temperature_by_station" width="100%" height="500" frameborder="0"></iframe>
 
 ## ☀️🌧️ **Sunshine and Rainfall — Feeling the Heat Differently**
@@ -58,7 +58,7 @@ These interactive plots will help visualize the **total rainfall** and **total s
 *<mark style="background: #BBFABBA6;">Remember that the charts are interactive — you can zoom in to specific parts by selecting an area, or, turn on-off some station data from the legend.</mark>*
 
 
-<iframe src="/Projects/code/1984MinersStrikeHeat/_output/total_summer_rainfall_by_station.html" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="/projects/code/1984MinersStrikeHeat/_output/total_summer_rainfall_by_station.html" width="100%" height="500" frameborder="0"></iframe>
 
 <iframe src="_output/total_summer_sunshine_by_station" width="100%" height="500" frameborder="0"></iframe>
 
@@ -85,9 +85,9 @@ Z-scores help measure how unusual a value (like the summer of 1984) is compared 
     
 - 🌍 **Pre-Global Warming Surge**: It precedes the rapid global warming that became more noticeable after the late 20th century, making it a stable base.
 
-<iframe src="/Projects/code/1984MinersStrikeHeat/_output/Cardiff_summer_1984_vs_climatology.html" width="100%" height="500" frameborder="0"></iframe>
-<iframe src="/Projects/code/1984MinersStrikeHeat/_output/Sheffield_summer_1984_vs_climatology.html" width="100%" height="500" frameborder="0"></iframe>
-<iframe src="/Projects/code/1984MinersStrikeHeat/_output/Waddington_summer_1984_vs_climatology.html" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="/projects/code/1984MinersStrikeHeat/_output/Cardiff_summer_1984_vs_climatology.html" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="/projects/code/1984MinersStrikeHeat/_output/Sheffield_summer_1984_vs_climatology.html" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="/projects/code/1984MinersStrikeHeat/_output/Waddington_summer_1984_vs_climatology.html" width="100%" height="500" frameborder="0"></iframe>
 ### 📈 **What This Plot Shows**
 
 This scatter plot visualizes the relationship between **temperature** and **rainfall** for each summer from 1883 onward. The z-scores of **1984** show how **hot** and **dry** it was compared to other years.

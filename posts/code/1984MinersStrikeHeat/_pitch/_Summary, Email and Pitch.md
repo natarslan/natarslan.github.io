@@ -2,7 +2,7 @@
 
 > In exhibitions and interviews about the 1984-85 miners’ strike, many miners talk about the heat — calling it “strike weather.” That phrase stayed with me. l decided to look at historical weather data from Cardiff and Sheffield — key locations deeply involved in the strike — and Waddington, an area in Lincolnshire with weather patterns closely aligned to the coalfields of Nottinghamshire and Yorkshire. The results don’t just match memory — they add another layer to the story of the strike. This piece is a short data-driven reflection on how working-class memory, place, and weather all intertwined during one of the most pivotal labour struggles in modern British history.
 
-> During the 1984 miners’ strike, some miners remembered the heat so clearly that they called it “strike weather.” That line stayed with me. I looked at historic weather data from Cardiff, Sheffield, and Waddington — three places connected to the strike — to see what the climate record shows. It turns out, their memories line up with some striking weather patterns. This short piece weaves together climate data and collective memory, showing how the environment becomes part of how people remember struggle.
+> During the 1984 miners’ strike, some miners remembered the heat so clearly that they called it “strike weather.” That line stayed with me. I looked at historic weather data from three strike cities Cardiff, Sheffield, and Waddington in order to see what the climate record shows. It turns out, their memories line up with some 'striking' weather patterns. This short piece weaves together climate data and collective memory, showing how the environment becomes part of how people remember struggle.
 
 ## Email
 
