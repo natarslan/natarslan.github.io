@@ -2,116 +2,131 @@
 title: Step 00 – Entire workflow overview
 ---
 
-# Entire workflow overview
+# Entire workflow — clear step-by-step guide (with aims and troubleshooting)
 
-1. Create the GitHub Pages repository
-   1. Sign in to https://github.com/ and create a public repo named `natarslan.github.io`.
-      - GitHub Pages only auto-publishes repos named `<username>.github.io`, so this sets up the destination.
-   2. Leave the repo empty (no README, no template).
-      - Quartz will supply every file, keeping the history clean.
+This document restates the workflow in short, numbered steps. Each step explains its aim, exact commands, and common troubleshooting or fixes for beginners.
 
-2. Install local prerequisites
-   1. Install Node.js v22+ from https://nodejs.org/en/download.
-      - Quartz uses modern JavaScript tooling that depends on this runtime.
-   2. Install Git from https://git-scm.com/downloads (or `xcode-select --install` on macOS).
-      - Git tracks your files and communicates with GitHub.
-   3. Verify in Terminal with `node -v`, `npm -v`, and `git --version`.
-      - These commands confirm the tools are on your PATH before continuing.
+1) Create the GitHub Pages repository
+   - Aim: Make an empty remote destination where GitHub Pages will publish your site.
+   - Commands / actions:
+     - In GitHub: create a new public repository named `natarslan.github.io`.
+     - Leave it empty (do not add README/License) to simplify initial push.
+   - Troubleshooting:
+     - Error: “repository already exists” — either pick a different name or use the existing repo by cloning it locally.
+     - If you accidentally initialized with a README, you can still proceed. You may need to pull and resolve a merge when you push local files (see Git sync step).
 
-3. Clone the empty Pages repository
-   1. `cd` into the workspace you prefer (e.g. `cd ~/Desktop/starbase`).
-      - All remaining commands assume you work inside this directory tree.
-   2. Run `git clone https://github.com/natarslan/natarslan.github.io.git`.
-      - This creates a local folder that mirrors the online repo.
-   3. Enter it via `cd natarslan.github.io`.
-      - Every subsequent setup command should run from here.
+2) Install prerequisites on your machine
+   - Aim: Ensure `node`, `npm`, and `git` are available for building and publishing.
+   - Commands:
+     - Install Node.js v22+ from nodejs.org and Git from git-scm.com.
+     - Verify: `node -v`, `npm -v`, `git --version`.
+   - Troubleshooting:
+     - If `node` or `npm` not found, restart your terminal or re-open your shell. Use a Node version manager (nvm) if you need multiple versions.
 
-4. Download the Quartz starter
-   1. Clone the Quartz template into a temporary folder: `git clone https://github.com/jackyzha0/quartz.git .quartz-template`.
-      - Pulls the official starter files directly from the source.
-   2. Copy everything (except the template’s `.git` and `content/`) into your repo using `rsync`.
-      - You inherit Quartz’s configuration, CLI, and docs while keeping your own Git history.
-   3. Remove `.quartz-template` once copied.
-      - Keeps your repo tidy and prevents confusion later.
+3) Clone the empty Pages repo locally
+   - Aim: Work inside a local copy of your publishing repository.
+   - Commands:
+     - cd to your workspace, e.g. `cd ~/Desktop/starbase`
+     - `git clone https://github.com/natarslan/natarslan.github.io.git`
+     - `cd natarslan.github.io`
+   - Troubleshooting:
+     - If clone fails with auth error, make sure your GitHub credentials or PAT are configured (see Authentication step).
 
-5. Install Quartz dependencies with npm
-   1. Run `npm install` (add `--cache .npm-cache` if needed).
-      - Downloads all libraries Quartz needs to build your site.
-   2. Ensure `.gitignore` lists `node_modules/` and `.npm-cache/`.
-      - These folders are large and auto-generated; they should not enter Git history.
+4) Add Quartz starter files into your repo
+   - Aim: Bring in Quartz’s build system, CLI, and templates without overwriting your repo history.
+   - Commands (simple approach):
+     - From your workspace root: `git clone https://github.com/jackyzha0/quartz.git .quartz-template`
+     - Copy necessary files into your repo (exclude `.git` and `content/`):
+       - macOS: `rsync -av --exclude='.git' --exclude='content' .quartz-template/ ./`
+     - Remove the temporary template: `rm -rf .quartz-template`
+   - Troubleshooting:
+     - Permission or path errors: run the commands from the correct folder and check `ls -la` to confirm files copied.
+     - If you already have a Quartz copy in the same folder (e.g., you cloned into `blog/`), you can skip re-copying — just ensure the `quartz.*` files and CLI are present.
 
-6. Connect your Obsidian vault via symlinks
-   1. Create a `content/` folder inside the repo (`mkdir -p content`).
-      - Quartz only processes Markdown placed under `content/`.
-   2. Keep all publishable material (notes plus media) under `/posts/<category>` and create matching symlinks, e.g. `ln -s ../posts/travel-nature content/travel-nature`.
-      - Symlinks let Quartz read your Obsidian files without copying them.
-   3. Remove a symlink with `rm content/FolderName` if you ever want to keep a folder private again.
-      - This deletes only the pointer, not your actual notes inside `posts/`.
+5) Install node dependencies
+   - Aim: Download packages Quartz needs to build the site.
+   - Commands:
+     - `npm install` (or `npm_config_cache=.npm-cache npm install` to use a local cache folder)
+   - Troubleshooting:
+     - Long or failing installs: try clearing the npm cache `npm cache clean --force` or use `--legacy-peer-deps` if dependency conflicts occur.
+     - Path-length warnings on macOS are usually non-blocking. If you see a cache path length error, set `npm_config_cache=.npm-cache` as above.
 
-7. Configure Quartz basics
-   1. Edit `quartz.config.ts` and update `pageTitle`, `pageTitleSuffix`, `baseUrl`, and `analytics`.
-      - These values define branding and how the site behaves.
-   2. Review theme fonts/colors and leave defaults unless you have a specific palette in mind.
-      - Styling lives centrally here, so one change affects the whole site.
-   3. Save and run `npx quartz build` to check for typos.
-      - Validates that the config compiles.
+6) Configure `quartz.config.ts` and basic site settings
+   - Aim: Set site title, baseUrl, and basic behavior so builds use correct metadata.
+   - Tasks:
+     - Open `quartz.config.ts` and set `pageTitle`, `baseUrl` (e.g., `https://natarslan.github.io`), and analytics if used.
+     - Verify theme options only if you plan to change styles.
+   - Troubleshooting:
+     - Build errors after editing: run `npx quartz build` to see TypeScript/compile errors and fix simple typos or missing commas.
 
-8. Customize layouts and plugins when ready
-   1. Tweak `quartz.layout.ts` to rearrange components such as Search, Graph, or RecentNotes.
-      - Layout files control what visitors see on each page type.
-   2. Adjust the `plugins` arrays in `quartz.config.ts` to add or remove features (e.g., ExplicitPublish, Latex).
-      - Transformers, filters, and emitters define how Markdown becomes HTML.
-   3. Edit `quartz/styles/custom.scss` for bespoke styling.
-      - Keeps overrides separate from upstream defaults.
+7) Connect your content (Obsidian vault) to Quartz
+   - Aim: Make your notes available to Quartz without duplicating files.
+   - Commands/examples:
+     - Create content folder: `mkdir -p content`
+     - Create a symlink from your Obsidian `posts` folder: `ln -s /full/path/to/posts content/posts`
+   - Troubleshooting:
+     - Broken symlink pages: confirm the target path is absolute and readable. Use `ls -l content` to inspect links.
+     - If Quartz can’t read symlinked files (some CI environments), consider copying the needed subfolder into `content/` instead.
 
-9. Manage Git remotes
-   1. Run `git remote -v` to see which remotes already exist.
-      - Helps you decide whether to update `origin` or add `quartz-upstream`.
-   2. Still inside your repo folder, set `origin` to `https://github.com/natarslan/natarslan.github.io.git` (or the SSH URL).
-      - `origin` is the remote you push to for publishing.
-   3. If `quartz-upstream` isn’t listed, add it with `git remote add quartz-upstream https://github.com/jackyzha0/quartz.git`.
-      - Lets you pull template updates later without disturbing `origin`.
-   4. Fetch/merge from `quartz-upstream` when you need new features.
-      - Keeps your local copy current with minimal manual edits.
+8) Preview and test locally (build + serve)
+   - Aim: Verify the site builds and looks correct before pushing to GitHub.
+   - Commands:
+     - Build: `npm_config_cache=.npm-cache npx quartz build`
+     - Serve: `npm_config_cache=.npm-cache npx quartz build --serve --port 8080`
+     - Visit: http://localhost:8080
+   - Troubleshooting & common fixes:
+     - Warnings about missing frontmatter or unresolved wikilinks: add missing frontmatter fields (title, date) or fix links in your notes.
+     - If the server crashes with an npm error, delete `node_modules` and re-run `npm install`.
+     - If the port is in use, change `--port 8080` to another port.
 
-10. Preview and test locally
-   1. Build once: `npm_config_cache=.npm-cache npx quartz build`.
-      - Generates static HTML in `public/`.
-   2. Start the dev server: `npm_config_cache=.npm-cache npx quartz build --serve --port 8080`.
-      - Opens a hot-reloading preview at http://localhost:8080.
-   3. Fix warnings (missing frontmatter, unknown wikilinks) before deploying.
-      - Prevents broken pages on GitHub Pages.
+9) Authentication with GitHub (PATs) and syncing remotes
+   - Aim: Be able to push to GitHub and let Actions deploy the site.
+   - Steps:
+     - Create a Personal Access Token (PAT) on GitHub with `repo` and `workflow` scopes.
+     - Configure Git to use the token: use HTTPS and credential helper, or set up SSH keys.
+   - Commands for common sync errors:
+     - If remote has changes: `git pull origin main --allow-unrelated-histories` (only when histories truly differ).
+     - If branches diverge with merges you don't want: `git config pull.rebase false` to prefer merge-style pulls.
+   - Troubleshooting:
+     - “Password authentication is no longer supported” — replace your password with a PAT.
+     - “fetch first” / remote has changes — run `git pull` and resolve conflicts locally before pushing.
 
-11. Automate deployment with GitHub Actions
-   1. Ensure `.github/workflows/deploy.yml` exists with the Quartz build steps.
-      - Defines how GitHub builds and uploads your site.
-   2. Commit the workflow and push to `origin main`.
-      - Triggers the action whenever you update the repo.
-   3. In the repo’s GitHub Settings → Pages, choose “GitHub Actions” as the source.
-      - Allows Pages to publish the artifacts produced by the workflow.
+10) Resolve merge conflicts (simple approach)
+   - Aim: Fix file conflicts so you can push a clean commit.
+   - Typical commands:
+     - See conflicts: `git status`
+     - Keep local version of a file: `git checkout --ours README.md`
+     - Or open conflicted files and edit manually, then `git add <file>` and `git commit`.
+   - Troubleshooting:
+     - If unsure which version to keep, review both sides inside your editor. Use `git diff --ours --theirs <file>`.
 
-12. Manage content through Obsidian
-   1. Write notes in the Obsidian vault folders linked under `content/`.
-      - Any Markdown saved there becomes publishable.
-   2. Add frontmatter (title, tags, draft, date) to each note.
-      - Quartz uses this metadata for listings, filters, and RSS.
-   3. Store media in `posts/attachments/` (or another linked folder) and embed using Obsidian syntax.
-      - Quartz resolves the same links during builds.
+11) Push and verify deployment
+   - Aim: Upload your site source so GitHub Actions builds and publishes to Pages.
+   - Commands:
+     - `git add . && git commit -m "chore: add quartz site and content"`
+     - `git push origin main`
+   - Troubleshooting:
+     - Large push failures: check `git lfs` if you accidentally added big binaries; avoid committing `node_modules/`.
+     - After a successful push, open GitHub Actions → the deployment workflow. If it fails, click the failed job to see logs for build errors.
 
-13. Follow the routine update workflow
-   1. Pull latest changes: `git pull origin main`.
-      - Prevents conflicts if you edit on multiple machines.
-   2. Build/serve locally, inspect output, then stop the server.
-      - Ensures the new content renders correctly.
-   3. Stage the exact files you changed (`git add content/travel-nature/new-story.md content/attachments/photo.jpg`), commit, and push (`git commit -m "feat: …"`, `git push origin main`).
-      - Publishing is just another Git push thanks to the workflow.
-   4. Monitor GitHub Actions for a green deployment.
-      - Confirms the live site updated successfully.
+12) Common issues seen and quick fixes (summary)
+   - Local server runs but Actions fails:
+     - Compare local Node/npm versions with the workflow's Node version and align them.
+   - Divergent or unrelated histories on push:
+     - Use `git pull origin main --allow-unrelated-histories` once, resolve conflicts, then push.
+   - GitHub auth errors:
+     - Create and use a PAT, or configure SSH keys; don’t use account passwords.
+   - Symlink content doesn’t appear in CI:
+     - Some CI runners don't follow symlinks — copy content into `content/` for CI, or add an Action step to resolve symlinks.
 
-14. Add new folders or reorganize safely
-   1. Create new subfolders inside `posts/` (or wherever you keep public material) and add matching symlinks inside `content/`.
-      - Keeps Quartz aware of every publishable directory.
-   2. Run `npx quartz build` after structural changes to catch broken paths early.
-      - Protects the site from 404s.
-   3. Commit both the folder changes and the updated links.
-      - Keeps history consistent and reproducible.
+13) Routine update workflow (daily edit → publish)
+   - Steps:
+     - `git pull origin main` to sync
+     - Edit or add Markdown under `content/` (or update your linked Obsidian vault)
+     - `npx quartz build --serve` locally to preview
+     - `git add <changed files> && git commit -m "feat: ..." && git push origin main`
+     - Watch GitHub Actions and confirm the Pages site publishes.
+
+If you want, I can now:
+- run a local build command and watch for the specific errors you saw, or
+- update the repository's workflow file to pin Node versions that match your local machine.
