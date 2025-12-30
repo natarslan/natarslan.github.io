@@ -1,10 +1,11 @@
 
 ## Information
-note type:: project-note
-context:: #social-photography
-status:: done
+note type: project-note
+context: #social-photography
+status: done
 tags: #photography #street-photography #social-project #street-readers
-location:: #germany
+location: #germany
+
 # street-lit: between the covers
 
 In a world where digital distractions dominate our lives, there is something rather powerful about seeing someone immersed in a paper book. The street lit photography series is about capturing these moments. It captures the strangers who choose to read in public spaces.
