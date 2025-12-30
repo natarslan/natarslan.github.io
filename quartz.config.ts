@@ -1,3 +1,4 @@
+import { mean } from "d3"
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
@@ -15,14 +16,20 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "natarslan.github.io",
+    // Use content-relative globs so Quartz ignores source files under `content/`
     ignorePatterns: [
-      "private", 
-      "templates", 
-      ".obsidian", 
-      "posts/code/miners-strike/**",
-      "posts/geospatial/umearally2025/**",
+      "content/**/private/**", # the double asterisks are important because they make the glob recursive which means it will match any level of subfolder
+      "content/**/templates/**",
+      "content/**/.obsidian/**",
+      "content/posts/code/miners-strike/**",
+      "content/posts/geospatial/umearally2025/**",
+      // ignore only this specific photography note (do not ignore entire folder)
       "posts/photography/_tips to publish photos.md",
-      "posts/productivity/obsidian/**"],
+      "content/posts/photography/_tips to publish photos.md",
+      "content/posts/productivity/obsidian/**",
+      "content/**ignored-notes/**",
+      "posts/ignored-notes/**",
+    ],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
