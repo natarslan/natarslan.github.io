@@ -3,47 +3,42 @@
 This explains how to exclude specific files or folders from Quartz' input set by adding patterns to `configuration.ignorePatterns` in `quartz.config.ts`, plus exact terminal commands to edit, commit, and verify the change.
 
 Notes:
-- Paths and globs are relative to the repository root (the Quartz build uses the repo root as the `cwd`).
-- Use forward slashes `/` in patterns on macOS.
-- Patterns are passed to `globby`/`minimatch`, so standard glob syntax works (e.g. `**`, `*`).
+- Quartz crawls the `content/` folder, so patterns should match the symlinked paths (e.g., `travel-nature/**`, not `posts/travel-nature/**`).
+- Paths and globs are relative to the repo root.
+- Use forward slashes `/` on macOS. Standard glob syntax (`*`, `**`) works.
 
 A. Where to add ignore patterns
 
 Open `quartz.config.ts` and find the `configuration.ignorePatterns` array. Add your patterns there (strings). Example section (showing new entries):
 
 ```ts
-  configuration: {
-    // ...
-    ignorePatterns: [
-      "private",
-      "templates",
-      ".obsidian",
-      // Add project-specific ignore patterns below:
-      "posts/code/1984MinersStrikeHeat/_pitch",
-      "posts/fiction/Haiku What We Leave Behind/_chatgpt dalle image prompt.md",
-      "posts/code/miners-strike/_output/**"
-    ],
-    // ...
-  },
+configuration: {
+  // ...
+  ignorePatterns: [
+    "private",
+    "templates",
+    ".obsidian",
+    // Add project-specific ignore patterns below:
+    "code/1984MinersStrikeHeat/_pitch",
+    "fiction/Haiku What We Leave Behind/_chatgpt dalle image prompt.md",
+    "code/miners-strike/_output/**"
+  ],
+  // ...
+},
 ```
 
 B. Example patterns for your three cases (exact strings to add)
 
-- Exclude only the single file `_pitch` inside `1984MinersStrikeHeat` (keep other files in that folder):
+- Exclude only the single file `_pitch` inside `1984MinersStrikeHeat` (keep other files in that folder):  
+  `code/1984MinersStrikeHeat/_pitch`
 
-  posts/code/1984MinersStrikeHeat/_pitch
+- Exclude the single file with spaces:  
+  `fiction/Haiku What We Leave Behind/_chatgpt dalle image prompt.md`
 
-- Exclude the single file with spaces:
+- Exclude the entire `_output` folder and everything under it:  
+  `code/miners-strike/_output/**`
 
-  posts/fiction/Haiku What We Leave Behind/_chatgpt dalle image prompt.md
-
-  (quote the pattern if editing from shell; inside `quartz.config.ts` it's a normal string.)
-
-- Exclude the entire `_output` folder and everything under it (all files and subfolders):
-
-  posts/code/miners-strike/_output/**
-
-  If you only want to ignore the folder itself but not files inside it (unusual), prefer ignoring the folder index file (e.g. `_output/_index.md`) instead.
+Remember: you are matching paths as Quartz sees them under `content/`, so omit the `posts/` prefix.
 
 C. Exact terminal steps (copy-paste)
 

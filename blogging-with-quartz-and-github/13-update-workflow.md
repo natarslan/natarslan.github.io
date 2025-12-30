@@ -22,6 +22,10 @@ Use this loop every time you want to refresh the live site.
    git commit -m "feat: publish new story"
    ```
    Adjust the `git add` paths to match the files you changed.
+   - Removing a category? Remove it from Git so Pages stops serving it:
+     ```bash
+     git rm -r content/code posts/code
+     ```
 6. Push to GitHub:
    ```bash
    git push origin main

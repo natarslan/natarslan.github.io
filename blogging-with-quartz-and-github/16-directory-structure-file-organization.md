@@ -1,69 +1,100 @@
-# Your Ongoing Quartz Blog Workflow — Directory Structure & File Organization
+---
+title: Step 16 – Directory structure & file organization
+---
 
-This guide summarizes how to organize folders, files, frontmatter, images, and commands for an ongoing Quartz blog workflow.
+# Directory structure & file organization
 
-## Adding New Folders
-Commands:
-```bash
-cd ~/Desktop/starbase/blog
-mkdir -p content/new-category
-mkdir -p content/projects
-mkdir -p content/notes
+This reference keeps the Quartz project and your Obsidian vault in sync.
+
+## 1. Canonical content lives in `posts/`
+
+```
+posts/
+  attachments/         # images, audio, PDFs used across the site
+    images/
+    flickr/
+  travel-nature/       # published essays
+  photography/
+  craft-art/
+  fiction/
+  geospatial/
+  productivity/
+  tools/
+  ignored-material/    # drafts/private, never published
 ```
 
-## File Naming and Conventions
-- Use descriptive names with hyphens: `my-travel-blog.md`.
-- Avoid spaces and special characters in filenames.
-- Recommended folder layout:
+- Every folder directly under `posts/` (except `ignored-material/`) corresponds to a top-level path on the website (`/travel-nature/…`, `/photography/…`, etc.).
+- Keep private or in-progress material inside `posts/ignored-material/`. The repo’s `.gitignore` and the lack of a symlink ensure Quartz ignores it.
+
+## 2. `content/` only contains symlinks
+
 ```
 content/
-  attachments/
-    images/
-  travel/
-    paris-2024.md
-  projects/
-    my-project.md
+  attachments -> ../posts/attachments
+  travel-nature -> ../posts/travel-nature
+  photography -> ../posts/photography
+  ...
 ```
 
-## YAML Frontmatter Template
-Add this at the top of each publishable note:
+Commands to recreate a symlink:
+
+```bash
+cd /Users/narslan/Desktop/starbase/blog/content
+ln -s ../posts/travel-nature travel-nature
+```
+
+Verification:
+
+```bash
+cd /Users/narslan/Desktop/starbase/blog
+find content -type l -ls
+```
+
+Remove a category from the site by deleting its symlink:
+
+```bash
+rm content/code
+```
+
+Quartz will no longer see the folder, and once you rebuild/push, the page disappears from the site.
+
+## 3. Adding a new category or note
+
+```bash
+cd /Users/narslan/Desktop/starbase/blog
+mkdir -p posts/fieldwork
+ln -s ../posts/fieldwork content/fieldwork
+printf "---\ntitle: \"Snow Survey Notes\"\ndate: 2025-01-10\ndraft: false\ntags:\n  - fieldwork\n---\n\nFirst observations…\n" > posts/fieldwork/snow-survey.md
+```
+
+Bare minimum frontmatter:
+
 ```yaml
 ---
-title: "Your Post Title"
-date: 2024-01-15
-tags:
-  - travel
-  - photography
-categories:
-  - blog
+title: "Your Title"
+date: 2025-01-10
 draft: false
-description: "Brief description for SEO"
-aliases:
-  - alternative-title
+tags:
+  - example
 ---
 ```
 
-## Images and Attachments
-- Store images under `content/attachments/images` or a subfolder.
-- Use Obsidian-style embedding or standard markdown:
-```
-![[image-name.jpg]]
-![Alt text](attachments/images/image-name.jpg)
-```
+## 4. Media and attachments
 
-## Daily Workflow Commands
+- Store all reusable media in `posts/attachments/` so it is available to every note.
+- Reference files with Obsidian syntax (`![[attachments/images/email logo.jpg]]`) or standard Markdown paths (`![Alt](attachments/images/email%20logo.jpg)`).
+- Keep media for private drafts inside `posts/ignored-material/` alongside the note so nothing leaks.
+
+## 5. Daily workflow recap
+
 ```bash
-# Test locally
-npx quartz build --serve --port 8080
-# Stage changes
-git add content/travel/paris-2024.md content/attachments/images/paris.jpg
-git commit -m "feat: add Paris post"
+cd /Users/narslan/Desktop/starbase/blog
+# edit notes inside posts/<category>/
+npm_config_cache=.npm-cache npx quartz build --serve --port 8080
+# when ready:
+git add content/travel-nature/new-post.md posts/attachments/images/new-photo.jpg
+git commit -m "feat: add new trail notes"
 git push origin main
 ```
 
-## Best Practices
-1. Test locally before pushing.
-2. Keep commits focused and descriptive.
-3. Organize images by topic.
-4. Add `date` in frontmatter to ensure correct chronology.
-
+Staging both the `posts/…` source files and the symlinks (if changed) keeps the repo consistent and prevents GitHub Pages from showing stale folders such as `/code/miners-strike/`.

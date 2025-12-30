@@ -60,13 +60,15 @@ This document restates the workflow in short, numbered steps. Each step explains
      - Build errors after editing: run `npx quartz build` to see TypeScript/compile errors and fix simple typos or missing commas.
 
 7) Connect your content (Obsidian vault) to Quartz
-   - Aim: Make your notes available to Quartz without duplicating files.
+   - Aim: Make your notes available to Quartz without duplicating files, folder-by-folder.
    - Commands/examples:
-     - Create content folder: `mkdir -p content`
-     - Create a symlink from your Obsidian `posts` folder: `ln -s /full/path/to/posts content/posts`
+     - Keep all publishable material under `/Users/narslan/Desktop/starbase/blog/posts/<category>/…` (e.g., `posts/travel-nature/`, `posts/photography/`).
+     - For each category you want live, create a symlink:  
+       `ln -s ../posts/travel-nature content/travel-nature`, `ln -s ../posts/photography content/photography`, etc.
+     - Leave `posts/ignored-material/` **without** a symlink; it holds drafts/private notes and is listed in `.gitignore`, so Quartz skips it.
    - Troubleshooting:
-     - Broken symlink pages: confirm the target path is absolute and readable. Use `ls -l content` to inspect links.
-     - If Quartz can’t read symlinked files (some CI environments), consider copying the needed subfolder into `content/` instead.
+     - Missing/404 pages after reorganizing: remove the old symlink (`rm content/travel-nature`), create a new one pointing to the renamed folder, rebuild, then commit/push so GitHub Pages updates.
+     - Use `find content -type l -ls` to verify every symlink points to `../posts/<category>`.
 
 8) Preview and test locally (build + serve)
    - Aim: Verify the site builds and looks correct before pushing to GitHub.
@@ -118,13 +120,15 @@ This document restates the workflow in short, numbered steps. Each step explains
      - Create and use a PAT, or configure SSH keys; don’t use account passwords.
    - Symlink content doesn’t appear in CI:
      - Some CI runners don't follow symlinks — copy content into `content/` for CI, or add an Action step to resolve symlinks.
+   - Old pages (e.g., `/code/miners-strike/`) still appear on the live site:
+      - Remove the corresponding files and symlinks (`git rm -r content/code posts/code`), rebuild locally, commit, and push so GitHub Pages redeploys without the stale HTML.
 
 13) Routine update workflow (daily edit → publish)
    - Steps:
      - `git pull origin main` to sync
-     - Edit or add Markdown under `content/` (or update your linked Obsidian vault)
+     - Edit or add Markdown under `posts/<category>/` in Obsidian (symlinks make Quartz see the same files)
      - `npx quartz build --serve` locally to preview
-     - `git add <changed files> && git commit -m "feat: ..." && git push origin main`
+     - `git add <changed files>` (including `posts/...` and any updated symlinks), `git commit -m "feat: ..."`, and `git push origin main`
      - Watch GitHub Actions and confirm the Pages site publishes.
 
 If you want, I can now:

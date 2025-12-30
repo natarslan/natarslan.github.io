@@ -18,8 +18,9 @@ title: Step 12 – Manage content with Obsidian
    - `draft: true` keeps it private.
    - `tags` fuel Quartz tag pages.
 3. Store media under `posts/attachments/` (or another folder that is symlinked into `content/`) and embed them in Obsidian using the usual `![[path/to/image.jpg]]` syntax—Quartz resolves the same links.
-4. Keep filenames short and descriptive. Quartz converts them into URLs, so `Blog/South Wales, Travel Notes.md` becomes `https://natarslan.github.io/Blog/South%20Wales,%20Travel%20Notes/`.
-5. When you finish a writing session:
+4. Drafts or private notes belong in `posts/ignored-material/` so they stay in your vault but never get published or tracked.
+5. Keep filenames short and descriptive. Quartz converts them into URLs, so `Blog/South Wales, Travel Notes.md` becomes `https://natarslan.github.io/Blog/South%20Wales,%20Travel%20Notes/`.
+6. When you finish a writing session:
    ```bash
    git status        # review changes
    git add content/travel-nature/my-post.md
