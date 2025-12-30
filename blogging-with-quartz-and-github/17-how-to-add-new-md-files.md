@@ -81,6 +81,16 @@ If you want to run a build with the same Node version as CI, ensure your local N
 - If Quartz logs "isn't yet tracked by git, dates will be inaccurate", either commit the file or add `date:` in frontmatter.
 - For large edits, preview locally with `--serve` before pushing.
 
+- If pages still show removed/renamed files or stale output after editing, clean the generated output and Quartz cache, then rebuild locally:
+
+```bash
+cd /Users/narslan/Desktop/starbase/blog
+rm -rf public .quartz-cache
+npm run build
+```
+
+This ensures `public/` (the generated site) is fully regenerated and prevents stale files from remaining in your deployed output.
+
 7) Quick checklist
 
 - [ ] Add `content/posts/your-new-post.md` with frontmatter

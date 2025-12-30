@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 ## adding short description below image
 
 in your grid code, you can add alt text which will ddisplay below your photo

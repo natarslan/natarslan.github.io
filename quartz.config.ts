@@ -15,21 +15,23 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "natarslan.github.io",
-    // Use content-relative globs so Quartz ignores source files under `content/`
-    ignorePatterns: [
-      "content/**/private/**", # the double asterisks are important because they make the glob recursive which means it will match any level of subfolder
-      "content/**/templates/**",
-      "content/**/.obsidian/**",
-      "content/posts/code/miners-strike/**",
-      "content/posts/geospatial/umearally2025/**",
-      // ignore only this specific photography note (do not ignore entire folder)
-      "posts/photography/_tips to publish photos.md",
-      "content/posts/photography/_tips to publish photos.md",
-      "content/posts/productivity/obsidian/**",
-      "content/**ignored-notes/**",
-      "posts/ignored-notes/**",
-    ],
+      baseUrl: "natarslan.github.io",
+      // Use content-relative globs so Quartz ignores source files under `content/`
+      ignorePatterns: [
+        "content/**/private/**",
+        "content/**/templates/**",
+        "content/**/.obsidian/**",
+        "content/posts/code/miners-strike/**",
+        "content/posts/geospatial/umearally2025/**",
+        // ignore only this specific photography note (do not ignore entire folder)
+        "posts/photography/_tips to publish photos.md",
+        "content/posts/photography/_tips to publish photos.md",
+        // ignore all files and subfolders under `posts/ignored-notes`
+        "posts/ignored-notes/**",
+        "content/posts/ignored-notes/**",
+        "content/photography/_tips to publish photos.md",
+        "content/posts/productivity/obsidian/**",
+      ],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",

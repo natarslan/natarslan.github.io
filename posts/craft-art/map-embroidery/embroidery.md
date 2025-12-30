@@ -2,9 +2,12 @@ tags: art
 
 #embroidery #makerspace 
 
-[[Projects/craft&art/Makerspace Embroidery/_IMG20250205205913.jpg]]
+![[blog/posts/attachments/photos/embroidery/_IMG20250205182517.jpg]]
 
-[[Projects/craft&art/Makerspace Embroidery/_IMG20250205182517.jpg]]
+![[blog/posts/attachments/photos/embroidery/_IMG20250205205913.jpg]]
+
+add footnote to the above photo in md syntax
+
 ## **Embroidery & Maps**
 
 Couple of days ago, I turned one of my old map illustrations into embroidery at Makerspace Umeå! The map shows the streets of Växjö, where Danuta Danielsson famously hit a Nazi on the head with her handbag. The process was fun, but I learned a lot—next time, I’ll focus on clearer silhouettes and stronger boundaries.
