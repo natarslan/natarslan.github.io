@@ -63,7 +63,7 @@ From the repo root:
 
 ```bash
 cd /Users/narslan/Desktop/starbase/blog
-git add content/posts/your-new-post.md
+git add content/posts/your-new-post.md OR git add .
 git commit -m "Add: your-new-post — short description"
 git push origin main
 ```
@@ -90,6 +90,20 @@ npm run build
 ```
 
 This ensures `public/` (the generated site) is fully regenerated and prevents stale files from remaining in your deployed output.
+
+- **Empty commit message in VS Code**: If you accidentally leave the commit message empty when VS Code prompts you, the commit will be aborted. To fix and retry:
+  1. Close the commit dialog (Ctrl+K or Cmd+K to cancel).
+  2. Run the commit again from the terminal with a message:
+  ```bash
+  cd /Users/narslan/Desktop/starbase/blog
+  git commit -m "Your commit message here"
+  git push origin main
+  ```
+  3. Or, to commit with no message (force with `--allow-empty` + empty `-m`), use:
+  ```bash
+  git commit --allow-empty -m ""
+  ```
+  However, always prefer a descriptive message for clarity in your git history.
 
 7) Quick checklist
 
