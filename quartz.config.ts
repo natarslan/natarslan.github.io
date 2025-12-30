@@ -19,10 +19,10 @@ const config: QuartzConfig = {
       "private", 
       "templates", 
       ".obsidian", 
-      "posts/code/miners-strike",
-      "posts/geospatial/umearally2025",
+      "posts/code/miners-strike/**",
+      "posts/geospatial/umearally2025/**",
       "posts/photography/_tips to publish photos.md",
-    "posts/productivity/obsidian"],
+      "posts/productivity/obsidian/**"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
