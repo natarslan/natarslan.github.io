@@ -15,7 +15,14 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "natarslan.github.io",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: [
+      "private", 
+      "templates", 
+      ".obsidian", 
+      "posts/code/miners-strike",
+      "posts/geospatial/umearally2025",
+      "posts/photography/_tips to publish photos.md",
+    "posts/productivity/obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
