@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 Book/Stranger 2 of 25
 
 Location: Hamburg central train station  

@@ -41,7 +41,7 @@ Still, I decided to experiment:
 🔹 **Exercise:** Do half of your exercise (say 10 min) → You’ll feel an urge to complete the other 10 minutes later.  
 🔹 **Reading:** Stop mid-sentence instead of at a chapter break → Your brain will pull you back.
 
-The result? I would have loved to say **I finished more tasks, with less dread**—but I can’t. What I can say is that this method definitely got me going. The overwhelming dread before starting a task **dissipated**.
+So I tried simulating cliffhangers to increase my chances of actually finishing a task. The result? I would have loved to say **I finished more tasks, with less dread**, but I can’t. What I can say is that this method definitely got me going. The overwhelming dread before starting a task **dissipated**.
 
 However, <mark style="background: #FFB8EBA6;">the Zeigarnik Effect might not always be helpful for someone with ADHD</mark>.
 
