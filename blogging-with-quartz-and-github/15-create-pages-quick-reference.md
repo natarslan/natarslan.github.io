@@ -66,4 +66,4 @@ This short guide shows the exact commands and checks to run while you create the
   - Or update `.github/workflows/deploy.yml` `actions/setup-node` `node-version` to match your local Node (e.g., `25`).
 
 ---
-File: blogging-with-quartz-and-github/01_create_pages_steps.md
+File: blogging-with-quartz-and-github/15-create-pages-quick-reference.md
