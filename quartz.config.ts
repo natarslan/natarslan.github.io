@@ -21,16 +21,15 @@ const config: QuartzConfig = {
         "content/**/private/**",
         "content/**/templates/**",
         "content/**/.obsidian/**",
-        "content/posts/code/miners-strike/**",
-        "content/posts/geospatial/umearally2025/**",
+        "content/code/miners-strike/**",
+        "content/geospatial/umearally2025/**",
         // ignore only this specific photography note (do not ignore entire folder)
         "posts/photography/_tips to publish photos.md",
-        "content/posts/photography/_tips to publish photos.md",
-        // ignore all files and subfolders under `posts/ignored-notes`
+        "content/photography/_tips to publish photos.md",
+        // ignore all files and subfolders under `posts/ignored-notes` and `content/posts/ignored-notes`
         "posts/ignored-notes/**",
         "content/posts/ignored-notes/**",
-        "content/photography/_tips to publish photos.md",
-        "content/posts/productivity/obsidian/**",
+        "content/productivity/obsidian/**",
       ],
     defaultDateType: "modified",
     theme: {
