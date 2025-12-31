@@ -24,9 +24,9 @@ location:: #germany
 
 ![Street lit](/attachments/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg)
 
-![[blog/posts/attachments/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg]]
+![book-1-stranger-1](blog/posts/attachments/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg)
 
-![[blog/posts/ignored-material/legacy-projects/photography/street lit/photos/_1_Magnified_SocialMedia.png]]
+![book-1-stranger-1-2](blog/posts/ignored-material/legacy-projects/photography/street%20lit/photos/_1_Magnified_SocialMedia.png)
 
 We are waiting for our next #train to arrive in Köln, which will take us to Hamburg. Among the shadows of the steel-glass train station, I see doves, and of course, I kneel down and take photos. A pair of black and white Converse pops into my camera frame. I lift my head to see the person. She is holding a book we all know by heart by now, 1984 by George Orwell. The cover design is different though, I don’t recognize it. By chance, she sits on the bench next to us. I tell my partner about a photo idea that's forming in my head. With her encouragement, I take the first step into this project.
 
