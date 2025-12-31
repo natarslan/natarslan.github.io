@@ -1,28 +1,24 @@
 ---
-created: 2025-12-30
+created: 2025-04-03
 modified: 2025-12-30
-author: Nat
+author: nat
+note-type:
+  - project-note
+context:
+  - social-project
+  - social-photography
+status: done
+tags:
+location: germany
 ---
+# Book/Stranger 1 of 25
 
-## Information
-note type:: project-note
+**location:** Köln central train station  
+**person:** Anonymous  
+**book:** 1984 by #george-orwell
+**date**: 03 April 2025
+#photography #street-photography #social-project #street-readers #germany
 
-context:: #social-photography
-
-status:: done
-
-#photography #street-photography #social-project #street-readers
-
-location:: #germany
-
-## Book/Stranger 1 of 25
-
-**Location:** Köln central train station  
-**Person:** Anonymous  
-**Book:** 1984 by #george-orwell
-**Date**: 03 April 2025
-
-![Street lit](/attachments/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg)
 
 ![book-1-stranger-1](blog/posts/attachments/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg)
 
