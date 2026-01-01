@@ -20,8 +20,12 @@ Md link
 Wikilink
 ![[blog/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
 
+### blog/public/assets/photos
+MD link
+![blog/public/assets/photos/2025-embroidery/_IMG20250205182517.jpg](blog/public/assets/photos/2025-embroidery/_IMG20250205182517.jpg)
 
-
+wikilink
+![[blog/public/assets/photos/2025-embroidery/_IMG20250205182517.jpg]]
 
 ## **Embroidery & Maps**
 
