@@ -3,6 +3,8 @@ tags: art
 #embroidery #makerspace 
 
 ## Final test
+Github url embed
+![github](https://raw.githubusercontent.com/natarslan/natarslan.github.io/main/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
 Markdown image (recommended):
 ![Embroidery sample](/assets/photos/2025-embroidery/_IMG20250205182517.jpg)
 
