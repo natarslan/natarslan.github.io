@@ -2,9 +2,9 @@ tags: art
 
 #embroidery #makerspace 
 
-![img1](/assets/photos/embroidery/_IMG20250205182517.jpg)
+![img1](/assets/photos/2025-embroidery/_IMG20250205182517.jpg)
 
-![[blog/posts/attachments/photos/embroidery/_IMG20250205205913.jpg]]
+![img2](/assets/photos/2025-embroidery/_IMG20250205205913.jpg)
 
 add footnote to the above photo in md syntax
 
