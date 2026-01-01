@@ -2,6 +2,25 @@ tags: art
 
 #embroidery #makerspace 
 
+## Final test
+Markdown image (recommended):
+![Embroidery sample](/assets/photos/2025-embroidery/_IMG20250205182517.jpg)
+
+With title/caption: 
+![Embroidery sample](/assets/photos/2025-embroidery/_IMG20250205182517.jpg "Danuta map stitch")
+
+Obsidian wikilink (Quartz still resolves it): 
+![[/assets/photos/2025-embroidery/_IMG20250205182517.jpg]]
+Wrapped in `<figure>` if you want HTML captions:
+
+```html
+<figure>
+  <img src="/assets/photos/2025-embroidery/_IMG20250205182517.jpg" alt="Embroidery sample"/>
+  <figcaption>Danuta Danielsson map embroidery</figcaption>
+</figure>
+```
+
+## Not Working
 Wikilink
 ![[blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
 
