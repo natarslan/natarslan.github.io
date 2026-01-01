@@ -6,9 +6,12 @@ tags: art
 
 To this: 
 
-![Embroidery sample](/attachments/photos/2025-embroidery/_IMG20250205182517.jpg) 
+blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg
+![Embroidery sample](/attachments/photos/photos/2025-embroidery/_IMG20250205182517.jpg) 
 
-![[/attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
+---
+
+![[/attachments/photos/photos/2025-embroidery/_IMG20250205182517.jpg]]
 
 ---
 [adding](/attachments/photos/2025-embroidery/_IMG20250205205913.jpg)
