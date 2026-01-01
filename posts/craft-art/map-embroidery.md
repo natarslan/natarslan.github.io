@@ -13,6 +13,16 @@ Assets path for 2 images
 
 ![img2](/assets/photos/2025-embroidery/_IMG20250205205913.jpg)
 
+### blog/content/attachments/photos/2025-embroidery
+Md link
+![blog/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg](blog/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
+
+Wikilink
+![[blog/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
+
+
+
+
 ## **Embroidery & Maps**
 
 Couple of days ago, I turned one of my old map illustrations into embroidery at Makerspace Umeå! The map shows the streets of Växjö, where Danuta Danielsson famously hit a Nazi on the head with her handbag. The process was fun, but I learned a lot—next time, I’ll focus on clearer silhouettes and stronger boundaries.
