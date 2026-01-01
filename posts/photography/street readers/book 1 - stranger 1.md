@@ -20,7 +20,7 @@ location: germany
 #photography #street-photography #social-project #street-readers #germany
 
 
-![book-1-stranger-1](blog/posts/attachments/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg)
+![book-1-stranger-1](/assets/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg)
 
 ![book-1-stranger-1-2](blog/posts/ignored-material/legacy-projects/photography/street%20lit/photos/_1_Magnified_SocialMedia.png)
 
