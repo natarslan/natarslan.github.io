@@ -20,6 +20,11 @@ Wrapped in `<figure>` if you want HTML captions:
 </figure>
 ```
 
+<figure>
+  <img src="/assets/photos/2025-embroidery/_IMG20250205182517.jpg" alt="Embroidery sample"/>
+  <figcaption>Danuta Danielsson map embroidery</figcaption>
+</figure>
+
 ## Not Working
 Wikilink
 ![[blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
