@@ -2,7 +2,7 @@ tags: art
 
 #embroidery #makerspace 
 
-![[blog/posts/attachments/photos/embroidery/_IMG20250205182517.jpg]]
+![img1](/assets/photos/embroidery/_IMG20250205182517.jpg)
 
 ![[blog/posts/attachments/photos/embroidery/_IMG20250205205913.jpg]]
 
