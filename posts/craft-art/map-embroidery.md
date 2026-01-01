@@ -8,13 +8,10 @@ Wikilink
 MD Link
 ![blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg](blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
 
-
-
+Assets path for 2 images
 ![img1](/assets/photos/2025-embroidery/_IMG20250205182517.jpg)
 
 ![img2](/assets/photos/2025-embroidery/_IMG20250205205913.jpg)
-
-add footnote to the above photo in md syntax
 
 ## **Embroidery & Maps**
 
