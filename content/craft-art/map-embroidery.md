@@ -4,6 +4,8 @@ tags: art
 
 ## Final test
 
+[adding](/attachments/photos/2025-embroidery/_IMG20250205205913.jpg)
+
 ![[/attachments/photos/2025-embroidery/_IMG20250205205913.jpg]]
 
 ![/attachments/photos/2025-embroidery/_IMG20250205205913.jpg](/attachments/photos/2025-embroidery/_IMG20250205205913.jpg)
