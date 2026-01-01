@@ -2,6 +2,14 @@ tags: art
 
 #embroidery #makerspace 
 
+Wikilink
+![[blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
+
+MD Link
+![blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg](blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
+
+
+
 ![img1](/assets/photos/2025-embroidery/_IMG20250205182517.jpg)
 
 ![img2](/assets/photos/2025-embroidery/_IMG20250205205913.jpg)
