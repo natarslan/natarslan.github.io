@@ -27,6 +27,14 @@ MD link
 wikilink
 ![[blog/public/assets/photos/2025-embroidery/_IMG20250205182517.jpg]]
 
+## Other tests
+
+Wikilink (absolute from content/ root)
+![[attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
+
+Standard markdown 
+![img](attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
+
 ## **Embroidery & Maps**
 
 Couple of days ago, I turned one of my old map illustrations into embroidery at Makerspace Umeå! The map shows the streets of Växjö, where Danuta Danielsson famously hit a Nazi on the head with her handbag. The process was fun, but I learned a lot—next time, I’ll focus on clearer silhouettes and stronger boundaries.
