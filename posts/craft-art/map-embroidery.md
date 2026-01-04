@@ -4,78 +4,10 @@ tags: art
 
 ## Final test
 
-To this: 
-
-blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg
-![Embroidery sample](/attachments/photos/photos/2025-embroidery/_IMG20250205182517.jpg) 
-
----
-
-![[/attachments/photos/photos/2025-embroidery/_IMG20250205182517.jpg]]
-
----
-[adding](/attachments/photos/2025-embroidery/_IMG20250205205913.jpg)
-
-![[/attachments/photos/2025-embroidery/_IMG20250205205913.jpg]]
-
-![/attachments/photos/2025-embroidery/_IMG20250205205913.jpg](/attachments/photos/2025-embroidery/_IMG20250205205913.jpg)
-Github url embed
-![github](https://raw.githubusercontent.com/natarslan/natarslan.github.io/main/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
-Markdown image (recommended):
-![Embroidery sample](/assets/photos/2025-embroidery/_IMG20250205182517.jpg)
-
-With title/caption: 
-![Embroidery sample](/assets/photos/2025-embroidery/_IMG20250205182517.jpg "Danuta map stitch")
-
-Obsidian wikilink (Quartz still resolves it): 
-![[/assets/photos/2025-embroidery/_IMG20250205182517.jpg]]
-Wrapped in `<figure>` if you want HTML captions:
-
-```html
-<figure>
-  <img src="/assets/photos/2025-embroidery/_IMG20250205182517.jpg" alt="Embroidery sample"/>
-  <figcaption>Danuta Danielsson map embroidery</figcaption>
-</figure>
-```
-
-<figure>
-  <img src="/assets/photos/2025-embroidery/_IMG20250205182517.jpg" alt="Embroidery sample"/>
-  <figcaption>Danuta Danielsson map embroidery</figcaption>
-</figure>
-
-## Not Working
-Wikilink
-![[blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
-
-MD Link
-![blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg](blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
-
-Assets path for 2 images
-![img1](/assets/photos/2025-embroidery/_IMG20250205182517.jpg)
-
-![img2](/assets/photos/2025-embroidery/_IMG20250205205913.jpg)
-
-### blog/content/attachments/photos/2025-embroidery
-Md link
-![blog/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg](blog/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
-
-Wikilink
-![[blog/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
-
-### blog/public/assets/photos
-MD link
-![blog/public/assets/photos/2025-embroidery/_IMG20250205182517.jpg](blog/public/assets/photos/2025-embroidery/_IMG20250205182517.jpg)
-
-wikilink
-![[blog/public/assets/photos/2025-embroidery/_IMG20250205182517.jpg]]
-
-## Other tests
-
-Wikilink (absolute from content/ root)
 ![[attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
 
-Standard markdown 
-![img](attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
+Github url embed
+![github](https://raw.githubusercontent.com/natarslan/natarslan.github.io/main/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
 
 ## **Embroidery & Maps**
 
