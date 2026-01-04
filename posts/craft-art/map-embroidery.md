@@ -2,12 +2,25 @@ tags: art
 
 #embroidery #makerspace 
 
-## Final test
-
-![[attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
+## Image test
 
 Github url embed
 ![github](https://raw.githubusercontent.com/natarslan/natarslan.github.io/main/content/attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
+
+Wikilink: /assets/photos
+![[/assets/photos/2025-embroidery/_IMG20250205182517.jpg]]
+
+Wikilink: assets/photos
+![[assets/photos/2025-embroidery/_IMG20250205182517.jpg]]
+
+Wikilink: /blog/posts/attachments
+![[/blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
+
+Wikilink: blog/posts/attachments
+![[blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg]]
+
+MD Link: blog/posts/attachments
+![blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg](blog/posts/attachments/photos/2025-embroidery/_IMG20250205182517.jpg)
 
 ## **Embroidery & Maps**
 
