@@ -31,8 +31,8 @@ This short guide shows the exact commands and checks to run while you create the
 - Aim: check site output before pushing.
 - Commands:
   npm_config_cache=/tmp/npm-cache npx quartz build
-  npm_config_cache=/tmp/npm-cache npx quartz build --serve --port 8080
-- Visit: http://localhost:8080
+  npm_config_cache=/tmp/npm-cache npx quartz build --serve --port 8090
+- Visit: http://localhost:8090
 - Troubleshooting:
   - Missing frontmatter or broken wikilinks: add frontmatter (`title`, `date`) or fix links.
   - If server crashes, delete `node_modules` and re-run `npm ci`.

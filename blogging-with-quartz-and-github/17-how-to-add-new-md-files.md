@@ -39,8 +39,8 @@ ln -s ../posts/travel-nature travel-nature  # skip if it already exists
 
 ```bash
 cd /Users/narslan/Desktop/starbase/blog
-npm_config_cache=.npm-cache npx quartz build --serve --port 8080
-# visit http://localhost:8080
+npm_config_cache=.npm-cache npx quartz build --serve --port 8090
+# visit http://localhost:8090
 ```
 
 4. **Stage, commit, and push the new file (and any media)**

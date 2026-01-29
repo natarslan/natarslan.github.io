@@ -27,7 +27,7 @@ title: 01 – Updating your site after the initial setup
    ```
 3. (If you want the new folder to appear on the site) create a matching symlink inside the repository’s `content/` directory:
    ```bash
-   cd /Users/narslan/Desktop/starbase/blog/your‑username.github.io   # replace with your repo folder name
+   cd /Users/narslan/Desktop/starbase/blog 
    ln -s ../../posts/photography/new‑series content/photography‑new‑series
    ```
    *The `../../` part goes up two levels because `content/` lives inside the repo while `posts/` lives next to it.*
@@ -52,7 +52,12 @@ title: 01 – Updating your site after the initial setup
 3. Write your content as normal markdown.
 4. **Embed an image** that you have placed in the attachments folder:
    ```markdown
-   ![[/assets/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg|300x200]]
+   From now on embed images using wikilink without initial /. So:
+! + "double brackets" + path: attachments/photos/... Do not use / before attachments.
+
+Wikilink: /attachments/photos/ 
+![[/attachments/photos/2025-embroidery/_IMG20250205205913.jpg]]
+
    ```
    *The path after `/assets/` mirrors the folder structure under `posts/attachments/`. The `copy‑attachments.sh` script will copy the image to `public/assets/` before the build.*
 
@@ -73,7 +78,7 @@ title: 01 – Updating your site after the initial setup
 ## 3️⃣ Commit the changes and push to GitHub
 1. Open a terminal **inside the cloned GitHub Pages repo** (the folder you created in Step 03 of the initial setup). Example path:
    ```bash
-   cd /Users/narslan/Desktop/starbase/blog/your‑username.github.io
+   cd /Users/narslan/Desktop/starbase/blog
    ```
 2. Stage all new/modified files:
    ```bash

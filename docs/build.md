@@ -8,7 +8,7 @@ Once you've [[index#🪴 Get Started|initialized]] Quartz, let's see what it loo
 npx quartz build --serve
 ```
 
-This will start a local web server to run your Quartz on your computer. Open a web browser and visit `http://localhost:8080/` to view it.
+This will start a local web server to run your Quartz on your computer. By default, the preview server now listens at `http://localhost:8090/`; pass `--port` if you want to use a different port.
 
 > [!hint] Flags and options
 > For full help options, you can run `npx quartz build --help`.

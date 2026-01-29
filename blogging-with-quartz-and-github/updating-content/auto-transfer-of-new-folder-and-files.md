@@ -44,8 +44,8 @@ What happens behind the scenes:
 ### 3️⃣  Verify locally (optional but recommended
 ```bash
 # Serve the site locally to see the new page
-npx quartz build --serve --port 8080
-# Open http://localhost:8080 in a browser and check the new notes appear.
+npx quartz build --serve --port 8090
+# Open http://localhost:8090 in a browser and check the new notes appear.
 ```
 If everything looks good, you can push the changes.
 

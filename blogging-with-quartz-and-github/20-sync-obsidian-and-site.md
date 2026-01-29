@@ -86,7 +86,7 @@ GitHub Actions rebuilds the site and removes any HTML for folders you deleted.
 ## 7. Quick troubleshooting checklist
 
 - `find content -type l -ls` → checks symlinks.
-- `npm_config_cache=.npm-cache npx quartz build --serve --port 8080` → preview the exact site that will publish.
+- `npm_config_cache=.npm-cache npx quartz build --serve --port 8090` → preview the exact site that will publish.
 - `git status` → ensures deletions/additions are staged before pushing.
 - https://github.com/natarslan/natarslan.github.io/actions → confirm the deploy workflow went green. If a category still appears, make sure its files were removed from `posts/` and committed.
 
@@ -108,7 +108,7 @@ cp /path/to/draft.md posts/photography/new-shot.md
 - Preview locally to verify layout and image paths:
 
 ```bash
-npm_config_cache=.npm-cache npx quartz build --serve --port 8080
+npm_config_cache=.npm-cache npx quartz build --serve --port 8090
 ```
 
 - Commit both the `posts/...` file and the `content/...` symlink if you changed it:
@@ -206,7 +206,7 @@ or, if your post is in the same tree and you prefer relative paths:
 find content -type l -ls | rg street-lit-photos
 
 # Start a local preview and open the page to confirm the image loads
-npm_config_cache=.npm-cache npx quartz build --serve --port 8080
+npm_config_cache=.npm-cache npx quartz build --serve --port 8090
 
 # Check the generated output contains the image
 ls public/attachments/photos/street-lit-photos/_1_Final_SocialMediajpg.jpg

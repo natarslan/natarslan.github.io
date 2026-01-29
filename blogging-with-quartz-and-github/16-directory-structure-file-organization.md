@@ -90,7 +90,7 @@ tags:
 ```bash
 cd /Users/narslan/Desktop/starbase/blog
 # edit notes inside posts/<category>/
-npm_config_cache=.npm-cache npx quartz build --serve --port 8080
+npm_config_cache=.npm-cache npx quartz build --serve --port 8090
 # when ready:
 git add content/travel-nature/new-post.md posts/attachments/images/new-photo.jpg
 git commit -m "feat: add new trail notes"

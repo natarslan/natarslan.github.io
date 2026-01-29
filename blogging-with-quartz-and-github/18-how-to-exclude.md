@@ -68,7 +68,7 @@ git push origin main
 
 ```bash
 cd /Users/narslan/Desktop/starbase/blog
-npm_config_cache=/tmp/npm-cache npx quartz build --serve --port 8080
+npm_config_cache=/tmp/npm-cache npx quartz build --serve --port 8090
 # or just build:
 # npm_config_cache=/tmp/npm-cache npx quartz build
 ```
@@ -87,7 +87,7 @@ F. Summary checklist
 
 - [ ] Edit `quartz.config.ts` -> add patterns to `configuration.ignorePatterns`
 - [ ] Commit & push
-- [ ] Run local build with `npm_config_cache=/tmp/npm-cache npx quartz build --serve --port 8080`
+- [ ] Run local build with `npm_config_cache=/tmp/npm-cache npx quartz build --serve --port 8090`
 - [ ] Confirm excluded paths are no longer processed
 
 If you want, I can (A) apply these exact edits to `quartz.config.ts` for you, (B) commit & push them, and (C) run a local build to confirm. Which should I do next?
