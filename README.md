@@ -1,18 +1,35 @@
-# Quartz v4
+# Nat's Quartz Blog (quick start)
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+This repo is a Quartz site that publishes Markdown notes as a static website on GitHub Pages.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+## Where to write
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+- Write posts in `posts/` (this is the only content folder used for publishing).
+- Put images / PDFs / other files either:
+  - next to your post (recommended), e.g. `posts/travel/my-post/assets/photo.jpg`, or
+  - in the shared `posts/attachments/` folder.
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+## Preview locally
 
-## Sponsors
+```bash
+cd /Users/narslan/Desktop/nebula/blog
+npm ci
+npx quartz build --serve -d posts
+```
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+Then open `http://localhost:8090`.
+
+## Publish
+
+```bash
+git add -A
+git commit -m "Update posts"
+git push
+```
+
+GitHub Actions builds + deploys to GitHub Pages on pushes to `main`.
+
+## Full guide
+
+Start at `docs/guide/00-start-here.md`.
+

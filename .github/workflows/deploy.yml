@@ -24,8 +24,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 25
-      - name: Make helper scripts executable
-        run: chmod +x copy-attachments.sh copy-content.sh
       - name: Install dependencies
         run: npm ci
       - name: Build Quartz

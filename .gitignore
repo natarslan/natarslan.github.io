@@ -1,0 +1,15 @@
+.DS_Store
+node_modules
+public
+.npm-cache
+prof
+tsconfig.tsbuildinfo
+.obsidian
+.webui_secret_key
+.quartz-cache
+private/
+.replit
+replit.nix
+posts/ignored-material/
+content/
+…/
